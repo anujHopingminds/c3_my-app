@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 
 function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <div className="header">
             {/* 1st box */}
@@ -10,7 +12,12 @@ function Header() {
                 </li>
             </ul>
             {/* 2nd box */}
-            <ul>
+            {/* <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> */}
+            <ul className={menuOpen ? "open" : ''}>
                 <li>
                     <a>About</a>
                 </li>
